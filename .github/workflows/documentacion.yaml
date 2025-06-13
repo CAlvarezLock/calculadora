@@ -1,7 +1,8 @@
-name: Comnpila y Genera PDFMore actions
-
-on: 
-  push:
+  name: Comnpila y Genera PDFMore actions
+  
+  on: 
+    push:
+      branches: main
 
   jobs:
     compila:
