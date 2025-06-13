@@ -1,7 +1,7 @@
-  name: Comnpila y Genera PDFMore actions
-  
-  on: 
-    push:
+	name: Comnpila y Genera PDFMore actions
+	
+	on: 
+	  push:
       branches: main
 
   jobs:
@@ -10,10 +10,10 @@
 
       steps:
       - name: Tener copia local del repo
-        uses: actions/checkout@v
+        uses: actions/checkout@v4
 
-      - name: Instalr .NET en el runner
-        uses: actions/setup-dotnet@v4\
+      - name: Instalar .NET en el runner
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9.0.x'
 
@@ -26,7 +26,7 @@
     crear-pdf:
       runs-on: ubuntu-latest
       steps: 
-      - uses: actions/checkout@3
+      - uses: actions/checkout@v4
       - uses: baileyjm02/markdown-to-pdf@1
         with:
           input_dir: docs
